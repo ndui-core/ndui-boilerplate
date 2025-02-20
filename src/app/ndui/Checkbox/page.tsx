@@ -1,3 +1,6 @@
+"use client";
+
+
 import { Button, Checkbox } from 'ndui-ahrom';
 import React, { useState } from 'react';
 
@@ -16,7 +19,7 @@ const CheckboxTestPage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Checkbox Test</h1>
 
       {/* Simple Checkbox */}

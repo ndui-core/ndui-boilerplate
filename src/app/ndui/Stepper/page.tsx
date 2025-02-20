@@ -26,7 +26,7 @@ export default function StepperTestPage() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <div className="container mx-auto p-8">
+    <div className="p-8">
       <h1 className="text-xl font-bold mb-4">Stepper Test Page</h1>
       <Stepper
         steps={steps}

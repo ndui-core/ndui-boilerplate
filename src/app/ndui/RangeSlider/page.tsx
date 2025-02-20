@@ -1,3 +1,6 @@
+"use client";
+
+
 import React, { useState } from 'react';
 import { RangeSlider, Slider } from 'ndui-ahrom';
 
@@ -8,7 +11,7 @@ export default function Table() {
   const [value4, setValue4] = useState<[number, number]>([40, 70]);
 
   return (
-    <div className="container mx-auto p-8">
+    <div className="p-8">
       <h1 className="text-2xl font-bold mb-4">RangeSlider Test</h1>
       
       <div className="mb-6">

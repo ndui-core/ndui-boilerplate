@@ -65,8 +65,8 @@ export default function DocsLayout({
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 ml-64">
-        <div className="">
+      <main className="flex-1 ml-64 bg-base-200">
+        <div className="p-8">
           {children}
         </div>
       </main>

@@ -1,3 +1,6 @@
+"use client";
+
+
 import { ButtonGroup } from 'ndui-ahrom';
 import React, { useState } from 'react';
 
@@ -12,7 +15,7 @@ const ButtonGroupTestPage: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Button Group Test</h1>
 
       {/* حالت پیش‌فرض */}

@@ -1,3 +1,6 @@
+"use client";
+
+
 import React, { useState } from 'react';
 import { Slider } from 'ndui-ahrom';
 
@@ -6,7 +9,7 @@ export default function Table() {
 
   const [sliderValue, setSliderValue] = useState(50);
   return (
-    <div className="container mx-auto p-6">
+    <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Toggle Component Test</h1>
       
       <div className="space-y-4">

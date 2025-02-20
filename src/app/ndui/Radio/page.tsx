@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import { Button, Radio, RangeSlider, Slider } from 'ndui-ahrom';
 
@@ -19,7 +21,7 @@ export default function Table() {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Radio Component Test</h1>
       <div className="space-y-4">
         <Radio

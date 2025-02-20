@@ -1,6 +1,13 @@
-import { Card, Button, Chip } from "ndui-ahrom";
+
+
+"use client"
+
+import { Drawer, Button } from "ndui-ahrom";
+import { useState } from "react";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content text-center">
@@ -8,26 +15,14 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Basic usage
-            <Chip label="Basic Chip" />
-            // With icon and delete
-            <Chip
-              label="React"
-              icon="⚛️"
-              onDelete={() => console.log("Delete clicked")}
-            />
-            // Different variants
-            <div className="space-x-2">
-              <Chip label="Filled" color="primary" variant="filled" />
-              <Chip label="Outlined" color="secondary" variant="outlined" />
-            </div>
-            // Custom styling
-            <Chip
-              label="Custom"
-              color="success"
-              size="lg"
-              className="font-bold"
-            />
+            <Button onClick={() => setIsOpen(true)}>Open Drawer</Button>
+
+            <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-4">Drawer Content</h2>
+                <p>This is the drawer content.</p>
+              </div>
+            </Drawer>
           </div>
         </div>
       </div>

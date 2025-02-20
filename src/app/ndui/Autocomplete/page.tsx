@@ -1,3 +1,6 @@
+"use client";
+
+
 import { Autocomplete } from 'ndui-ahrom';
 import React, { useState } from 'react';
 

@@ -1,3 +1,6 @@
+"use client";
+
+
 import React, { useState } from 'react';
 import { Button, RichTextEditor, Slider } from 'ndui-ahrom';
 
@@ -22,7 +25,7 @@ export default function Table() {
   };
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Rich Text Editor Test</h1>
       <RichTextEditor
         content={content}

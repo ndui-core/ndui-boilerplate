@@ -1,3 +1,6 @@
+"use client";
+
+
 import React, { useState } from 'react';
 import {Toggle} from 'ndui-ahrom';
 
@@ -5,7 +8,7 @@ export default function Table() {
   const [checked, setChecked] = useState(false);
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Toggle Component Test</h1>
       
       <div className="space-y-4">
