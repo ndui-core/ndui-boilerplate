@@ -1,5 +1,5 @@
-"use client"
-import { Card, Button, Chip } from "ndui-ahrom";
+"use client";
+import {  Chip } from "ndui-ahrom";
 
 export default function Home() {
   return (
@@ -9,20 +9,20 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Basic usage
+            Basic usage
             <Chip label="Basic Chip" />
-            // With icon and delete
+            With icon and delete
             <Chip
               label="React"
               icon="⚛️"
               onDelete={() => console.log("Delete clicked")}
             />
-            // Different variants
+            Different variants
             <div className="space-x-2">
               <Chip label="Filled" color="primary" variant="filled" />
               <Chip label="Outlined" color="secondary" variant="outlined" />
             </div>
-            // Custom styling
+            Custom styling
             <Chip
               label="Custom"
               color="success"

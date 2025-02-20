@@ -1,20 +1,20 @@
-import { Breadcrumbs } from 'ndui-ahrom';
+import { Breadcrumbs } from "ndui-ahrom";
 
 const items = [
   {
-    label: 'Home',
-    href: '/',
-    icon: '🏠'
+    label: "Home",
+    href: "/",
+    icon: "🏠",
   },
   {
-    label: 'Products',
-    href: '/products',
-    icon: '📦'
+    label: "Products",
+    href: "/products",
+    icon: "📦",
   },
   {
-    label: 'Current Page',
-    icon: '📄'
-  }
+    label: "Current Page",
+    icon: "📄",
+  },
 ];
 
 export default function Home() {
@@ -25,11 +25,11 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Basic usage
+            Basic usage
             <Breadcrumbs items={items} />
-            // Custom separator
+            Custom separator
             <Breadcrumbs items={items} separator=">" />
-            // Custom styling
+            Custom styling
             <Breadcrumbs items={items} className="text-primary" />
           </div>
         </div>

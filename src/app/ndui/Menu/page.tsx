@@ -32,9 +32,9 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Basic usage
+            Basic usage
             <Menu trigger={<Button>Open Menu</Button>} items={items} />
-            // Custom position
+            Custom position
             <Menu
               trigger={<Button>Actions</Button>}
               items={items}

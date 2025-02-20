@@ -15,13 +15,11 @@ export default function Home() {
       <Button onClick={() => setIsOpen2(true)}>Open Drawer 2</Button>
       <Button onClick={() => setIsOpen3(true)}>Open Drawer 3</Button>
       <Button onClick={() => setIsOpen4(true)}>Open Drawer 4</Button>
-
       <Drawer
         isOpen={isOpen}
         mini={isOpen}
         onClose={() => setIsOpen(false)}
         side="right"
-        
         size="300px"
       >
         <div className="p-4">
@@ -29,7 +27,7 @@ export default function Home() {
           <p>This is the drawer content.</p>
         </div>
       </Drawer>
-      // Resizable drawer
+      Resizable drawer
       <Drawer
         isOpen={isOpen2}
         onClose={() => setIsOpen2(false)}
@@ -42,7 +40,7 @@ export default function Home() {
           <p>Drag the edge to resize</p>
         </div>
       </Drawer>
-      // Mini drawer
+      Mini drawer
       <Drawer
         isOpen={isOpen3}
         onClose={() => setIsOpen3(false)}
@@ -53,7 +51,7 @@ export default function Home() {
           <h2>Mini Drawer</h2>
         </div>
       </Drawer>
-      // Responsive drawer
+      Responsive drawer
       <Drawer
         isOpen={isOpen4}
         onClose={() => setIsOpen4(false)}

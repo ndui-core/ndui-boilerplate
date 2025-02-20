@@ -26,7 +26,7 @@ export default function TableDemo() {
       {/* Basic Table */}
       <h2 className="text-lg font-bold mb-2">Basic Table</h2>
       <Timeline items={items} />
-      // Alternate layout
+      Alternate layout
       <Timeline items={items} side="alternate" />
     </div>
   );

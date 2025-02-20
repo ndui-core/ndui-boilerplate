@@ -87,11 +87,16 @@ const tool = (
     <div className="flex ">
       <Button variant="ghost">⚙️</Button>
 
-      <Menu position="right" trigger={<Button variant="ghost">menu</Button>} items={items} />
+      <Menu
+        position="right"
+        trigger={<Button variant="ghost">menu</Button>}
+        items={items}
+      />
     </div>
   </div>
 );
-// app/layout.tsx
+
+
 export default function RootLayout({
   children,
 }: {
@@ -106,10 +111,15 @@ export default function RootLayout({
           drawerWidth="300px"
           rtl
           miniDrawerWidth="60px"
-          breakpoint={1024} // Switch to mobile below 1024px
+          breakpoint={1024}
           bottomBarItems={[
-            { icon: "🏠", label: "Home", value: "home" , href:"/ndui"},
-            { icon: "⚙️", label: "drawer", value: "drawer", href:'/ndui/Drawer' },
+            { icon: "🏠", label: "Home", value: "home", href: "/ndui" },
+            {
+              icon: "⚙️",
+              label: "drawer",
+              value: "drawer",
+              href: "/ndui/Drawer",
+            },
           ]}
         >
           <div className="p-8">{children}</div>

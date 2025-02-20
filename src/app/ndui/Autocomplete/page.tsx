@@ -1,8 +1,7 @@
 "use client";
 
-
-import { Autocomplete } from 'ndui-ahrom';
-import React, { useState } from 'react';
+import { Autocomplete } from "ndui-ahrom";
+import React, { useState } from "react";
 
 interface Option {
   label: string;
@@ -11,17 +10,16 @@ interface Option {
 
 const AutocompleteTestPage: React.FC = () => {
   const options: Option[] = [
-    { value: 'apple', label: 'Apple' },
-    { value: 'banana', label: 'Banana' },
-    { value: 'cherry', label: 'Cherry' },
-    { value: 'grape', label: 'Grape' },
-    { value: 'orange', label: 'Orange' },
+    { value: "apple", label: "Apple" },
+    { value: "banana", label: "Banana" },
+    { value: "cherry", label: "Cherry" },
+    { value: "grape", label: "Grape" },
+    { value: "orange", label: "Orange" },
   ];
 
   const [singleValue, setSingleValue] = useState<Option | null>(null);
-  const [multiValue, setMultiValue] = useState<Option[]>([]); // 🔥 مقداردهی صحیح
+  const [multiValue, setMultiValue] = useState<Option[]>([]);
   const [errorValue, setErrorValue] = useState<Option | null>(null);
-  const [loading, setLoading] = useState(false);
 
   return (
     <div className="tw-container tw-mx-auto tw-p-6">
@@ -53,7 +51,12 @@ const AutocompleteTestPage: React.FC = () => {
       {/* حالت بدون گزینه */}
       <div className="tw-mb-6">
         <h2 className="tw-text-lg tw-font-semibold tw-mb-2">Empty Options</h2>
-        <Autocomplete options={[]} value={null} onChange={() => {}} label="No Options Available" />
+        <Autocomplete
+          options={[]}
+          value={null}
+          onChange={() => {}}
+          label="No Options Available"
+        />
       </div>
 
       {/* حالت غیرفعال */}
@@ -96,9 +99,14 @@ const AutocompleteTestPage: React.FC = () => {
       {/* نمایش مقدار انتخاب‌شده */}
       <div className="tw-mt-6 tw-p-4 tw-border tw-rounded-lg">
         <h2 className="tw-text-lg tw-font-semibold">Selected Values:</h2>
-        <p className="tw-text-primary tw-font-medium">Single: {singleValue?.label || 'None'}</p>
         <p className="tw-text-primary tw-font-medium">
-          Multi: {multiValue.length > 0 ? multiValue.map((v) => v.label).join(', ') : 'None'}
+          Single: {singleValue?.label || "None"}
+        </p>
+        <p className="tw-text-primary tw-font-medium">
+          Multi:{" "}
+          {multiValue.length > 0
+            ? multiValue.map((v) => v.label).join(", ")
+            : "None"}
         </p>
       </div>
     </div>

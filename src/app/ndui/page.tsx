@@ -6,13 +6,13 @@ export default function Home() {
         NDUI is a modern React component library designed to help you build
         beautiful and functional user interfaces quickly and efficiently.
       </p>
-      
+
       <h2>Getting Started</h2>
       <p>
-        Select a component from the sidebar to view its documentation,
-        examples, and usage guidelines. Each component page includes:
+        Select a component from the sidebar to view its documentation, examples,
+        and usage guidelines. Each component page includes:
       </p>
-      
+
       <ul>
         <li>Live examples</li>
         <li>Usage patterns</li>

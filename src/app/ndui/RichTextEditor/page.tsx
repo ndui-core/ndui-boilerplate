@@ -1,27 +1,26 @@
 "use client";
 
-
-import React, { useState } from 'react';
-import { Button, RichTextEditor, Slider } from 'ndui-ahrom';
+import React, { useState } from "react";
+import { Button, RichTextEditor } from "ndui-ahrom";
 
 export default function Table() {
-  const [content, setContent] = useState('<p>Initial content</p>');
-  const [error, setError] = useState('');
-  const [savedContent, setSavedContent] = useState('');
+  const [content, setContent] = useState("<p>Initial content</p>");
+  const [error, setError] = useState("");
+  const [savedContent, setSavedContent] = useState("");
 
   const handleSave = () => {
     if (!content.trim()) {
-      setError('Content cannot be empty.');
+      setError("Content cannot be empty.");
       return;
     }
-    setError('');
+    setError("");
     setSavedContent(content);
-    console.log('Saved content:', content);
+    console.log("Saved content:", content);
   };
 
   const handleClear = () => {
-    setContent('');
-    setError('');
+    setContent("");
+    setError("");
   };
 
   return (
@@ -35,7 +34,9 @@ export default function Table() {
       />
       <div className="flex gap-4 mt-4">
         <Button onClick={handleSave}>Save</Button>
-        <Button onClick={handleClear} variant="secondary">Clear</Button>
+        <Button onClick={handleClear} variant="secondary">
+          Clear
+        </Button>
       </div>
       {savedContent && (
         <div className="mt-6 border p-4 rounded-lg">
@@ -45,5 +46,4 @@ export default function Table() {
       )}
     </div>
   );
-};
-
+}

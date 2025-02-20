@@ -10,18 +10,18 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Text skeleton
+            Text skeleton
             <Skeleton type="text" />
-            // Circle avatar
+            Circle avatar
             <Skeleton type="circle" width={48} height={48} />
-            // Custom rectangle
+            Custom rectangle
             <Skeleton
               type="rectangle"
               width="100%"
               height={200}
               animation="wave"
             />
-            // Loading card example
+            Loading card example
             <div className="space-y-4">
               <Skeleton type="text" width="60%" />
               <Skeleton type="text" />

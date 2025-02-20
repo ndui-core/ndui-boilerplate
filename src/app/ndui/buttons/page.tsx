@@ -8,19 +8,19 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Basic usage
+            Basic usage
             <Button>Click me</Button>
-            // With variant and size
+            With variant and size
             <Button variant="secondary" size="lg">
               Large Secondary Button
             </Button>
-            // Loading state
+            Loading state
             <Button loading>Saving...</Button>
-            // With icon
+            With icon
             <Button icon={<span>👋</span>} iconPosition="right">
               Hello
             </Button>
-            // Full width
+            Full width
             <Button fullWidth>Full Width Button</Button>
           </div>
         </div>

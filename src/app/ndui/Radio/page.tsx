@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
-import { Button, Radio, RangeSlider, Slider } from 'ndui-ahrom';
+import React, { useState } from "react";
+import { Button, Radio} from "ndui-ahrom";
 
 export default function Table() {
-  const [selectedValue, setSelectedValue] = useState('');
-  const [error, setError] = useState('');
+  const [selectedValue, setSelectedValue] = useState("");
+  const [error, setError] = useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
-    setError('');
+    setError("");
   };
 
   const handleSubmit = () => {
     if (!selectedValue) {
-      setError('Please select an option.');
+      setError("Please select an option.");
       return;
     }
-    console.log('Selected value:', selectedValue);
+    console.log("Selected value:", selectedValue);
   };
 
   return (
@@ -28,7 +28,7 @@ export default function Table() {
           label="Option 1"
           name="test-radio"
           value="option1"
-          checked={selectedValue === 'option1'}
+          checked={selectedValue === "option1"}
           onChange={handleChange}
           error={error}
         />
@@ -36,7 +36,7 @@ export default function Table() {
           label="Option 2"
           name="test-radio"
           value="option2"
-          checked={selectedValue === 'option2'}
+          checked={selectedValue === "option2"}
           onChange={handleChange}
           error={error}
         />
@@ -47,8 +47,9 @@ export default function Table() {
           disabled
         />
       </div>
-      <Button className="mt-4" onClick={handleSubmit}>Submit</Button>
+      <Button className="mt-4" onClick={handleSubmit}>
+        Submit
+      </Button>
     </div>
   );
-};
-
+}

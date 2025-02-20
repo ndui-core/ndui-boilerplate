@@ -35,11 +35,11 @@ export default function StepperTestPage() {
         orientation="horizontal"
         showNavigation
       />
-      // Basic usage
+      Basic usage
       <Stepper steps={steps} />
-      // Vertical orientation
+      Vertical orientation
       <Stepper steps={steps} orientation="vertical" />
-      // Controlled stepper
+      Controlled stepper
       <Stepper steps={steps} activeStep={activeStep} onChange={setActiveStep} />
     </div>
   );

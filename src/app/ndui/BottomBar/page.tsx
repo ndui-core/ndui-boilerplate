@@ -58,7 +58,9 @@ export default function Home() {
       </div>
 
       {/* Conditional Rendering of BottomBar */}
-      {selectedBar === "default" && <BottomBar items={items} value={active} onChange={setActive} />}
+      {selectedBar === "default" && (
+        <BottomBar items={items} value={active} onChange={setActive} />
+      )}
       {selectedBar === "custom" && (
         <BottomBar
           items={items}

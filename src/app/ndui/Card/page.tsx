@@ -11,11 +11,11 @@ export default function Home() {
             <Card>
               <p>Simple card content</p>
             </Card>
-            // Card with title and footer
+            Card with title and footer
             <Card title="Card Title" footer={<Button>Action</Button>}>
               <p>Card content with title and footer</p>
             </Card>
-            // Custom styled card
+            Custom styled card
             <Card className="w-96 mx-auto">
               <p>Custom width card</p>
             </Card>

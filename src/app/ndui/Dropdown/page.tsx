@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Dropdown, Button } from "ndui-ahrom";
 
@@ -23,9 +23,9 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Basic usage
+            Basic usage
             <Dropdown trigger={<Button>Open Menu</Button>} items={items} />
-            // Custom position and size
+            Custom position and size
             <Dropdown
               trigger={<Button>Settings</Button>}
               items={items}

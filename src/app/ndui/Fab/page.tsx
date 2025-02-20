@@ -10,11 +10,11 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Basic usage
+            Basic usage
             <Fab icon="+" onClick={() => console.log("FAB clicked")} />
-            // Custom position and color
+            Custom position and color
             <Fab icon="📝" position="top-right" color="secondary" size="lg" />
-            // Multiple FABs
+            Multiple FABs
             <>
               <Fab icon="+" position="bottom-right" color="primary" />
               <Fab

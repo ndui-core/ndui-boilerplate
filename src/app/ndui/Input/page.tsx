@@ -10,15 +10,15 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Buttons Test</h1>
 
           <div className="flex flex-col my-8 gap-4">
-            // Basic usage
+            Basic usage
             <Input label="Username" placeholder="Enter username" />
-            // With error state
+            With error state
             <Input
               label="Email"
               type="email"
               error="Please enter a valid email"
             />
-            // Custom variant and size
+            Custom variant and size
             <Input
               label="Search"
               variant="ghost"

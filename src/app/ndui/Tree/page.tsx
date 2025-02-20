@@ -23,9 +23,9 @@ export default function TableDemo() {
     <div className="p-4">
       {/* Basic Table */}
       <h2 className="text-lg font-bold mb-2">Basic Table</h2>
-      // Basic usage // Basic usage
+      Basic usage Basic usage
       <Tree nodes={nodes} />
-      // With click handler and default expanded nodes
+      With click handler and default expanded nodes
       <Tree
         nodes={nodes}
         onNodeClick={(node) => console.log("Clicked:", node.label)}
