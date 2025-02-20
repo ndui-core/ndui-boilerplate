@@ -19,7 +19,7 @@ export default function TableDemo() {
         <div className="flex gap-2">
           <Button>Settings</Button>
           <Button>Profile</Button>
-        </div>
+        </div>  
       </Toolbar>
       // Custom styling
       <Toolbar className="bg-primary text-primary-content">

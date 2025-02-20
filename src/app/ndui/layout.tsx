@@ -1,5 +1,27 @@
+"use client";
+import { Button, LayoutWrapper, Menu } from "ndui-ahrom";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+
+const items = [
+  {
+    id: "1",
+    label: "Edit",
+    icon: "✏️",
+    onClick: () => console.log("Edit clicked"),
+  },
+  {
+    id: "2",
+    label: "Delete",
+    icon: "🗑️",
+    onClick: () => console.log("Delete clicked"),
+  },
+  { id: "3", label: "-", divider: true },
+  {
+    id: "4",
+    label: "Settings",
+    icon: "⚙️",
+  },
+];
 
 const components = [
   { name: "Alerts", path: "/ndui/Alerts" },
@@ -35,41 +57,64 @@ const components = [
   { name: "Tree", path: "/ndui/Tree" },
 ];
 
-export default function DocsLayout({
+const side = (
+  <aside className="w-full bg-base-200 p-6 fixed h-full overflow-y-auto">
+    <div className="mb-8">
+      <h1 className="text-2xl font-bold mb-2">NDUI</h1>
+      <p className="text-sm text-gray-600">Component Documentation</p>
+    </div>
+    <nav>
+      <ul className="space-y-2">
+        {components.map((component) => (
+          <li key={component.path}>
+            <Link
+              href={component.path}
+              className="block py-2 px-4 rounded hover:bg-base-300 transition-colors"
+            >
+              {component.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </aside>
+);
+
+const tool = (
+  <div className="flex gap-2 justify-between w-full">
+    <p>test</p>
+
+    <div className="flex ">
+      <Button variant="ghost">⚙️</Button>
+
+      <Menu position="right" trigger={<Button variant="ghost">menu</Button>} items={items} />
+    </div>
+  </div>
+);
+// app/layout.tsx
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen">
-      {/* Sidebar */}
-      <aside className="w-64 bg-base-200 p-6 fixed h-full overflow-y-auto">
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold mb-2">NDUI</h1>
-          <p className="text-sm text-gray-600">Component Documentation</p>
-        </div>
-        <nav>
-          <ul className="space-y-2">
-            {components.map((component) => (
-              <li key={component.path}>
-                <Link
-                  href={component.path}
-                  className="block py-2 px-4 rounded hover:bg-base-300 transition-colors"
-                >
-                  {component.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </aside>
-
-      {/* Main content */}
-      <main className="flex-1 ml-64 bg-base-200">
-        <div className="p-8">
-          {children}
-        </div>
-      </main>
-    </div>
+    <html lang="en">
+      <body>
+        <LayoutWrapper
+          drawerContent={side}
+          toolbarContent={tool}
+          drawerWidth="300px"
+          rtl
+          miniDrawerWidth="60px"
+          breakpoint={1024} // Switch to mobile below 1024px
+          bottomBarItems={[
+            { icon: "🏠", label: "Home", value: "home" , href:"/ndui"},
+            { icon: "⚙️", label: "drawer", value: "drawer", href:'/ndui/Drawer' },
+          ]}
+        >
+          <div className="p-8">{children}</div>
+        </LayoutWrapper>
+      </body>
+    </html>
   );
 }
